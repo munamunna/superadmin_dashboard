@@ -1,0 +1,62 @@
+<div class="wrapper mt-4">
+    <div class="sidebar" id="sidebar" #sidebar>
+
+      <nav class="nav flex-column">
+        <a class="nav-link" href="#"><i class="bi bi-house-door"></i><span>Dashboard</span></a>
+        <a class="nav-link" routerLink="/create-user"><i class="bi bi-person"></i><span>User</span></a>
+        <a class="nav-link" href="#"><i class="bi bi-handbag"></i><span>Deals</span></a>
+        <a class="nav-link" href="#"><i class="bi bi-bullseye"></i><span>Campaign</span></a>
+        <a class="nav-link" href="#"><i class="bi bi-check2-square"></i><span>Tasks</span></a>
+        <a class="nav-link" href="#"><i class="bi bi-repeat"></i><span>Follow up</span></a>
+        <a class="nav-link" href="#"><i class="bi bi-activity"></i><span>Activities</span></a>
+        <a class="nav-link" href="#"><i class="bi bi-calendar"></i><span>Calendar</span></a>
+
+        <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-graph-up"></i><span>Reports</span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="reportsDropdown">
+          <li><a class="dropdown-item" href="#">Report 1</a></li>
+          <li><a class="dropdown-item" href="#">Report 2</a></li>
+          <li><a class="dropdown-item" href="#">Report 3</a></li>
+        </ul>
+
+        <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-gear"></i><span>Settings</span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="settingsDropdown">
+          <li><a class="dropdown-item" href="#">Setting 1</a></li>
+          <li><a class="dropdown-item" href="#">Setting 2</a></li>
+          <li><a class="dropdown-item" href="#">Setting 3</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="toggle-btn" id="toggleBtn">
+        <i class="bi bi-arrow-left-circle"></i>
+      </div> -->
+      <div class="toggle-btn" id="toggleBtn" #toggleBtn>
+        <i class="bi bi-arrow-left-circle"></i>
+      </div>
+    </div>
+    <div class="content">
+        <h2>Welcome to the Dashboard</h2>
+        <p>This is your content area. You can place tables, cards, charts, or any other elements here.</p>
+    
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text">Some quick example text.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">Another example card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
