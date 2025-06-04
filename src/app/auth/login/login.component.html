@@ -1,16 +1,22 @@
-<div class="login-container">
-    <h2>Login</h2>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
+   <app-nav></app-nav>
+
+    <h4 class="text-center mb-4">Login</h4>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label>Email</label>
-        <input type="email" formControlName="email" />
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Enter your email" />
       </div>
-      <div>
-        <label>Password</label>
-        <input type="password" formControlName="password" />
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Enter your password" />
       </div>
-      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
-      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+      <div *ngIf="errorMessage" class="text-danger mb-3">{{ errorMessage }}</div>
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+        <button type="button" class="btn btn-secondary" routerLink="/reset-password">Reset</button>
+      </div>
     </form>
   </div>
-  
+</div>

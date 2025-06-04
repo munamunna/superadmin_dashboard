@@ -18,4 +18,12 @@ registernewUser(obj:User):Observable< APIResponsemodel>{
     
   return this.http.post<APIResponsemodel>(this.apiUrl+"users/",obj)
 }
+
+
+
+listusers():Observable<APIResponsemodel>{
+  return this.http.get<APIResponsemodel>(this.apiUrl+"user-list/")
+}
+
+
 }
