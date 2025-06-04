@@ -25,10 +25,12 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
-      this.http.post<any>('http://localhost:8000/api/login/', credentials).subscribe({
+      console.log(credentials);
+
+      this.http.post<any>('http://localhost:8000/api/token/', credentials, { headers: { 'Content-Type': 'application/json' } }).subscribe({
         next: (response) => {
           // Save token/role to localStorage
-          localStorage.setItem('token', response.token || '');
+          localStorage.setItem('accesstoken', response.access || '');
           localStorage.setItem('role', response.role || 'user');
 
           // Redirect based on role
